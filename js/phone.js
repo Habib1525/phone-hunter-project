@@ -91,7 +91,10 @@ const showphonedetails = (phone) =>{
   const showdetails = document.getElementById('show-detail-container');
   showdetails.innerHTML = `
      <img src="${phone.image}" alt="">
-    <p><span>Storage :</span>${phone.brand}</p>
+    <p><span>Brand :</span>${phone.brand}</p>
+    <p><span>Storage :</span>${phone.mainFeatures.storage}</p>
+    <p><span>GPS:</span>${phone.others?.GPS || 'No GPS available'}</p>
+    <p><span>GPS:</span>${phone.others?.GPS ? phone.others.GPS : 'No GPS available in this device'}</p>
   `
 
   a.showModal()
